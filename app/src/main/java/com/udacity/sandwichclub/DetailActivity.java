@@ -3,6 +3,7 @@ package com.udacity.sandwichclub;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -63,10 +64,10 @@ public class DetailActivity extends AppCompatActivity {
 
     private void populateUI() {
         mainName.setText(sandwich.getMainName());
-        alsoKnownAs.setText(sandwich.getAlsoKnownAs().get(1));
+        alsoKnownAs.setText(TextUtils.join(",",sandwich.getAlsoKnownAs()));
         placeOfOrigin.setText(sandwich.getPlaceOfOrigin());
         descriptions.setText(sandwich.getDescription());
-        ingredients.setText(sandwich.getIngredients().get(1));
+        ingredients.setText(TextUtils.join(",",sandwich.getIngredients()));
         Picasso.with(this)
                 .load(sandwich.getImage())
                 .into(image);

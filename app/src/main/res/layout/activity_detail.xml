@@ -6,76 +6,89 @@
     tools:context="com.udacity.sandwichclub.DetailActivity">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    <ImageView
-        android:id="@+id/image_iv"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/sandwich_picture_content_description"
-        android:scaleType="centerCrop" />
-        <TextView
-            android:id="@+id/main_Name"
-            android:layout_toRightOf="@id/image_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/also_known_as"
-            android:text="Also known as:"
-            android:layout_below="@id/image_iv"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/also_known_as1"
-        android:layout_below="@id/also_known_as"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/place_Of_origin"
-            android:text="Place of origin"
-            android:layout_below="@id/also_known_as1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/place_Of_origin"
-        android:id="@+id/place_Of_origin1"
-        android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/image_iv"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                tools:src="@mipmap/ic_launcher"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/sandwich_picture_content_description"
+                android:scaleType="centerCrop" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Description"
-        android:layout_below="@id/place_Of_origin1"
-        android:id="@+id/description"
-        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/main_Name"
+                tools:text="Main Name"
+                style="@style/Base.TextAppearance.AppCompat.Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/image_iv" />
 
-    <TextView
-        android:id="@+id/description1"
-        android:layout_below="@id/description"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/also_known_as"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_iv"
+                android:textStyle="bold"
+                android:text="Also known as" />
 
-    <TextView
-        android:id="@+id/ingridients"
-        android:layout_below="@id/description1"
-        android:text="Ingridient"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/also_known_as1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="This item is also known as Burger"
+                android:layout_below="@id/also_known_as" />
 
-    <TextView
-        android:id="@+id/ingrediets1"
-        android:layout_below="@id/ingridients"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/place_Of_origin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/also_known_as1"
+                android:textStyle="bold"
+                android:text="Place of origin" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/place_Of_origin1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place_Of_origin"
+                tools:text="Lahore"/>
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/place_Of_origin1"
+                android:text="Description"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/description1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description"
+                tools:text="Very delicious andy wala burger"/>
+
+            <TextView
+                android:id="@+id/ingridients"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/description1"
+                android:textStyle="bold"
+                android:text="Ingredients" />
+
+            <TextView
+                android:id="@+id/ingrediets1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Sugar, Alpha, Beta, Omega"
+                android:layout_below="@id/ingridients" />
+
+        </RelativeLayout>
     </ScrollView>
 </FrameLayout>
