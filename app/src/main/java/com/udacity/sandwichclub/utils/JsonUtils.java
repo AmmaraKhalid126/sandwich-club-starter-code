@@ -13,8 +13,8 @@ public class JsonUtils {
 
     public static Sandwich parseSandwichJson(String json)
     {
-        ArrayList<ArrayList<String>> ingredients_array = null;
-        String place_of_origin, description_string, image_string;
+//        ArrayList<ArrayList<String>> ingredients_array = null;
+//        String place_of_origin, description_string, image_string;
         Sandwich sandwich = new Sandwich();
         try {
             JSONObject obj = new JSONObject(json);
@@ -45,6 +45,7 @@ public class JsonUtils {
                     ingredientsData.add(ingredients.getString(i));
                 }
             }
+            sandwich.setIngredients(ingredientsData);
 
 
 
