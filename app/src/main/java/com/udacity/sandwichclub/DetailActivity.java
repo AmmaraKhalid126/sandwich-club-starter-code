@@ -80,7 +80,7 @@ public class DetailActivity extends AppCompatActivity {
         placeOfOrigin=(TextView)findViewById(R.id.place_Of_origin1);
         descriptions=(TextView)findViewById(R.id.description1);
         ingredients=(TextView)findViewById(R.id.ingrediets1);
-        image=(ImageView)findViewById(R.id.image_iv)
+        image=(ImageView)findViewById(R.id.image_iv);
 
 
     }
